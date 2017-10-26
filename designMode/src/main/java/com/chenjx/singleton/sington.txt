@@ -1,0 +1,84 @@
+#单例设计模式
+
+一、饿汉式,简单说,在成员变量中创建一个静态final对象.详见Singleton1
+
+二、懒汉式,lazy延时加载,想要时,再创建.详见Singleton2
+
+三、单例注册表,因为前两种单例不能被继承,详见RegSingleton
+
+四、spring中的应用
+1.Spring中的单例实现，当我们试图从Spring容器中取得某个类的实例时，默认情况下，Spring会才用单例模式进行创建。
+	<bean id="date" class="java.util.Date"/>
+	<bean id="date" class="java.util.Date" scope="singleton"/> (仅为Spring2.0支持)
+	<bean id="date" class="java.util.Date" singleton="true"/>
+
+	spring中不使用单例模式,scope属性设置为prototype(原型)
+	<bean id="date" class="java.util.Date" scope="prototype"/>
+
+2.spring底层采用的是单例注册表
+	public abstract class AbstractBeanFactory implements ConfigurableBeanFactory{
+     /**
+      * 充当了Bean实例的缓存，实现方式和单例注册表相同
+      */
+     private final Map singletonCache=new HashMap();
+     public Object getBean(String name)throws BeansException{
+         return getBean(name,null,null);
+     }
+  ...
+     public Object getBean(String name,Class requiredType,Object[] args)throws BeansException{
+        //对传入的Bean name稍做处理，防止传入的Bean name名有非法字符(或则做转码)
+        String beanName=transformedBeanName(name);
+        Object bean=null;
+        //手工检测单例注册表
+        Object sharedInstance=null;
+        //使用了代码锁定同步块，原理和同步方法相似，但是这种写法效率更高
+        synchronized(this.singletonCache){
+           sharedInstance=this.singletonCache.get(beanName);
+         }
+        if(sharedInstance!=null){
+           ...
+           //返回合适的缓存Bean实例
+           bean=getObjectForSharedInstance(name,sharedInstance);
+        }else{
+          ...
+          //取得Bean的定义
+          RootBeanDefinition mergedBeanDefinition=getMergedBeanDefinition(beanName,false);
+           ...
+          //根据Bean定义判断，此判断依据通常来自于组件配置文件的单例属性开关
+          //<bean id="date" class="java.util.Date" scope="singleton"/>
+          //如果是单例，做如下处理
+          if(mergedBeanDefinition.isSingleton()){
+             synchronized(this.singletonCache){
+              //再次检测单例注册表
+               sharedInstance=this.singletonCache.get(beanName);
+               if(sharedInstance==null){
+                  ...
+                 try {
+                    //真正创建Bean实例
+                    sharedInstance=createBean(beanName,mergedBeanDefinition,args);
+                    //向单例注册表注册Bean实例
+                     addSingleton(beanName,sharedInstance);
+                 }catch (Exception ex) {
+                    ...
+                 }finally{
+                    ...
+                }
+               }
+             }
+            bean=getObjectForSharedInstance(name,sharedInstance);
+          }
+         //如果是非单例，即prototpye，每次都要新创建一个Bean实例
+         //<bean id="date" class="java.util.Date" scope="prototype"/>
+         else{
+            bean=createBean(beanName,mergedBeanDefinition,args);
+         }
+  }
+  ...
+     return bean;
+  }
+  }
+
+
+
+
+
