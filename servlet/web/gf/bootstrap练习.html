@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>菜鸟教程(runoob.com)</title>
+<script src="http://static.runoob.com/assets/jquery-validation-1.14.0/lib/jquery.js"></script>
+<script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
+<script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/localization/messages_zh.js"></script>
+<script>
+$.validator.setDefaults({
+    submitHandler: function() {
+      alert("提交事件!");
+    }
+});
+
+$().ready(function() {
+// 在键盘按下并释放及提交后验证提交表单
+  $("#signupForm").validate({
+      rules: {
+        firstname: "required",
+        lastname: "required",
+        username: {
+          required: true,
+          minlength: 2
+        },
+        SMS_verification:{
+          required:true,
+          length:4
+        },
+        password: {
+          required: true,
+          minlength: 5
+        },
+        confirm_password: {
+          required: true,
+          minlength: 5,
+          equalTo: "#password"
+        },
+        email: {
+          required: true,
+          email: true
+        },
+        "topic[]": {
+          required: "#newsletter:checked",
+          minlength: 2
+        },
+        agree: "required"
+      },
+      messages: {
+        firstname: "*该公司已被注册，请重新输入或联系客服！",
+        lastname: "请输入您的姓氏",
+        username: {
+          required: "请输入用户名",
+          minlength: "用户名必需由两个字母组成"
+        },
+        SMS_verification:{
+          required:"请输入验证码",
+          equalTo:"验证码错误，请重新输入！"
+        },
+        password: {
+          required: "请输入密码",
+          minlength: "密码长度不能小于 5 个字母"
+        },
+        confirm_password: {
+          required: "请输入密码",
+          minlength: "密码长度不能小于 5 个字母",
+          equalTo: "两次密码输入不一致"
+        },
+        email: "请输入一个正确的邮箱",
+        agree: "请接受我们的声明",
+        topic: "请选择两个主题"
+      }
+  });
+  $(".d").click(function() {
+  $("form").submit();
+});
+});
+</script>
+<style>
+.error{
+  color:red;
+}
+</style>
+</head>
+<body>
+<form action="">
+<input type="checkbox" name="checkbox1" value="checkbox"> 跑步 
+<input type="checkbox" name="checkbox2" value="checkbox"> 打球 
+<input type="checkbox" name="checkbox3" value="checkbox"> 登山 
+<input type="checkbox" name="checkbox4" value="checkbox"> 健美<br> 
+</form> 
+</body>
+</html>

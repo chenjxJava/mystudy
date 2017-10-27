@@ -1,0 +1,7 @@
+div[class^="col-"]{
+          border: 1px #ccc solid;
+          background: #eee;
+           /*padding: 30px 15px;*/
+          padding-top: 30px;
+          padding-bottom: 30px;
+      }

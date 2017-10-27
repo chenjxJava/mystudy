@@ -1,0 +1,704 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+p {
+    font-family: "MicrosoftYaHei";
+}
+
+span {
+    font-family: "PingFangSC-Regular";
+}
+
+a {
+    /*text-decoration: none;*/
+}
+
+.Register-Public-header {
+    background-image: linear-gradient(-90deg, #4B76BF 0%, #488FCC 52%, #4B76BF 100%);
+    box-shadow: 0 2px 4px 0 rgba(210, 210, 210, 0.50);
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    padding-left: 30px;
+}
+
+.RPheader-left {
+    display: inline-block;
+}
+
+.RPheader-right {
+    display: inline-block;
+    float: right;
+}
+
+.Register-Public-header span {
+    font-size: 24px;
+    color: #FFFFFF;
+}
+
+.Divide {
+    padding: 0 10px;
+}
+
+.Register-Public-header a span {
+    font-size: 14px;
+    color: #FFFFFF;
+}
+
+.Register-Public-header .Rigister-login {
+
+    padding-right: 89px;
+    font-family: "MicrosoftYaHei";
+    font-size: 14px;
+    font-weight: 700;
+    color: #E3E3E3;
+
+}
+
+.Register-Public-header .Rigister-login a span {
+    font-family: "MicrosoftYaHei";
+    font-size: 14px;
+    color: #fff;
+}
+
+/*进度条*/
+.www {
+    height: 80px;
+}
+
+.Rigister .progress {
+    /*height: 4px;
+    margin-bottom: 20px;
+    background-color: #f5f5f5;
+    border-radius: 4px;*/
+    /*-webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.1);*/
+    /*box-shadow: inset 0 1px 2px rgba(0,0,0,.1);*/
+    width: 40%;
+    height: 4px;
+    background-color: rgba(0, 0, 0, 0.3);
+    margin: 30px auto;
+    position: relative;
+    overflow: initial;
+}
+
+/*定位进度条文字*/
+.progress .posi6 {
+    opacity: 0.5;
+    font-family: "MicrosoftYaHei";
+    font-size: 12px;
+    color: #858585;
+}
+
+.progress .posi1 {
+    position: absolute;
+    left: -3%;
+    top: 26px;
+}
+
+.progress .posi2 {
+    position: absolute;
+    left: 20%;
+    top: 26px;
+}
+
+.progress .posi3 {
+    position: absolute;
+    left: 47%;
+    top: 26px;
+}
+
+.progress .posi4 {
+    position: absolute;
+    left: 71%;
+    top: 26px;
+}
+
+.progress .posi5 {
+    position: absolute;
+    right: -6%;
+    top: 26px;
+}
+
+.progress .icon {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    line-height: 26px;
+    text-align: center;
+    background-color: #D1D1D1;
+    color: white;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.icon.active {
+    background-color: #508FF1;
+}
+
+#ic1 {
+    left: 0;
+}
+
+#ic2 {
+    left: 25%;
+}
+
+#ic3 {
+    left: 50%;
+}
+
+#ic4 {
+    left: 75%;
+}
+
+#ic5 {
+    left: 100%;
+}
+
+#ic7 {
+    left: 33.4%;
+}
+
+#ic8 {
+    left: 66.7%;
+}
+
+#ic9 {
+    left: 100%;
+}
+
+/*show点击*/
+/*.aa{
+	display: none;
+}*/
+.show {
+    display: block;
+}
+
+/*入驻须知*/
+.Rigister .instructions {
+    width: 100%;
+    /*height: 100%;*/
+    background: #fff;
+}
+
+.instrctions-text {
+    padding: 0 113px;
+    background: #F8F8F8;
+    height: 75%;
+    border-top: 4px #508FF1 solid;
+    overflow-y: auto;
+}
+
+.instrctions-text .enter {
+    margin-left: -20px;
+    height: 22px;
+    line-height: 13px;
+    border-bottom: 1px solid #E7EAEC;
+}
+
+.instrctions-text p {
+    margin: 20px 0px;
+}
+
+.instrctions-text ol li {
+    margin-top: 10px;
+}
+
+.instrctions-text ol li.li1 {
+    margin-top: 0;
+}
+
+/*公司地址*/
+select.select_gsdz {
+    width: 110px;
+    height: 50px;
+    border-radius: 4px;
+    border-right: none;
+    border-color: #ccc;
+}
+
+select.select8 {
+    width: 330px;
+    height: 50px;
+    border-radius: 4px;
+    border-color: #ccc;
+}
+
+/*点击下一步*/
+.button {
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+}
+
+/*短信验证*/
+.button button {
+    background: #508FF1;
+    border-radius: 4px;
+    color: #fff;
+    height: 46px;
+    width: 150px;
+    font-weight: 700;
+    font-family: "MicrosoftYaHei-Bold";
+    font-size: 14px;
+    border: none;
+}
+
+/*表单第二步*/
+.form-wh {
+    width: 450px;
+    margin: 0 auto;
+}
+
+.form-wh input {
+    width: 330px;
+    height: 40px;
+    font-size: 14px;
+    background: #FFFFFF;
+    border: 1px solid #E2E2E2;
+    border-radius: 4px;
+}
+
+.form-group .col-sm-3.control-label {
+    font-family: "MicrosoftYaHei";
+    font-size: 14px;
+    font-weight: 700;
+    color: #6F6F6F;
+    margin-top: 10px;
+    padding-top: 0px;
+}
+
+.inline {
+    margin-left: 45px;
+    float: left;
+}
+
+/*资源上传*/
+.business-license {
+    width: 79px;
+    height: 19px;
+    line-height: 19px;
+    margin-top: 5px;
+
+}
+
+.business-license h6 {
+    font-family: "MicrosoftYaHei";
+    font-weight: 700;
+    font-size: 14px;
+    color: #464648;
+    letter-spacing: 0.5px;
+    width: 150px;
+    line-height: 10px;
+}
+
+.a-upload {
+    padding: 0px 0px 0px 10px;
+    height: 50px;
+    width: 330px;
+    line-height: 50px;
+    position: relative;
+    cursor: pointer;
+    color: #888;
+    background: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display: inline-block;
+    zoom: 1;
+}
+
+.uplogd_right {
+    float: right;
+}
+
+.a-upload input {
+    position: absolute;
+    font-size: 100px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    cursor: pointer;
+}
+
+.a-upload:hover {
+    color: #444;
+    background: #eee;
+    border-color: #ccc;
+    text-decoration: none;
+}
+
+select.select {
+    width: 330px;
+    height: 50px;
+}
+
+/*经营品牌信息*/
+.AddABrand {
+    font-family: "MicrosoftYaHei";
+    font-size: 14px;
+    font-weight: 700;
+    color: #666666;
+    margin-left: 10px;
+}
+
+/*css type=checkbox*/
+input[type="checkbox"] {
+    width: 12px;
+    height: 12px;
+    font-size: 12px;
+    color: #ccc;
+}
+
+/*证件图片类型*/
+.col-sm-3.control-label.we {
+    font-family: "MicrosoftYaHei";
+    font-size: 14px;
+    font-weight: 700;
+    color: #6F6F6F;
+    margin-top: 10px;
+    top: -15px;
+    padding-left: 13px;
+}
+
+.trademark {
+    display: none;
+}
+
+/*校验颜色*/
+.error {
+    color: red;
+}
+
+/*获取图片*/
+.preview {
+    margin-left: 120px;
+    width: 100px;
+    height: 80px;
+    border: none;
+    display: none;
+}
+
+.next, .pre {
+    border: none;
+    width: 152px;
+    height: 46px;
+    border-radius: 4px;
+    background-color: #508ff1;
+    color: #fff;
+    line-height: 44px;
+    text-align: center;
+    font-size: 20px;
+}
+
+/*图片*/
+
+#picker1 {
+    width: 480px;
+    height: 280px;
+    border: 1px solid #c2c7ca;
+    background: #f6f6f6 url("../../assets/image/img-default1.png") 160px 55px no-repeat;
+    position: relative;
+}
+
+#picker1 img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#btnSync1 {
+    display: none;
+}
+
+#savePic {
+    display: none;
+}
+
+#picker2 {
+    width: 480px;
+    height: 280px;
+    border: 1px solid #c2c7ca;
+    background: #f6f6f6 url("../../assets/image/img-default2.png") 200px 100px no-repeat;
+    position: relative;
+}
+
+.webuploader-pick {
+    cursor: pointer;
+    background: #00b7ee;
+    padding: 10px 15px;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    border-radius: 3px;
+}
+
+.webuploader-pick-hover {
+    background: #00a2d4;
+}
+
+.wu-example {
+    position: relative;
+    padding: 5px 0;
+    width: 100%;
+}
+
+#picker {
+    display: inline-block;
+    line-height: 1.428571429;
+    vertical-align: middle;
+    margin: 0 12px 0 0;
+}
+
+#picker .webuploader-pick {
+    padding: 6px 12px;
+    display: block;
+}
+
+.uploader-demo .thumbnail {
+    width: 110px;
+    height: 110px;
+    margin: 0 0 5px 0 !important;
+}
+
+.uploader-demo .thumbnail img {
+    width: 100%;
+}
+
+.uploader-list {
+    width: 100%;
+    overflow: hidden;
+}
+
+.file-item {
+    float: left;
+    position: relative;
+    margin: 0 20px 20px 0;
+    padding: 4px;
+}
+
+.file-item .error {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    right: 4px;
+    background: red;
+    color: white;
+    text-align: center;
+    height: 20px;
+    font-size: 14px;
+    line-height: 23px;
+}
+
+.file-item .info {
+    position: absolute;
+    left: 4px;
+    bottom: 4px;
+    right: 4px;
+    height: 20px;
+    line-height: 20px;
+    text-indent: 5px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 12px;
+    z-index: 10;
+}
+
+.upload-state-done:after {
+    content: "\f00c";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 32px;
+    position: absolute;
+    bottom: 0;
+    right: 4px;
+    color: #4cae4c;
+    z-index: 99;
+}
+
+.file-item .progress {
+    position: absolute;
+    right: 4px;
+    bottom: 4px;
+    height: 3px;
+    left: 4px;
+    height: 4px;
+    overflow: hidden;
+    z-index: 15;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    background: transparent;
+}
+
+.file-item .progress span {
+    display: block;
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    -webit-transition: width 200ms linear;
+    -moz-transition: width 200ms linear;
+    -o-transition: width 200ms linear;
+    -ms-transition: width 200ms linear;
+    transition: width 200ms linear;
+    -webkit-animation: progressmove 2s linear infinite;
+    -moz-animation: progressmove 2s linear infinite;
+    -o-animation: progressmove 2s linear infinite;
+    -ms-animation: progressmove 2s linear infinite;
+    animation: progressmove 2s linear infinite;
+    -webkit-transform: translateZ(0);
+}
+
+@-webkit-keyframes progressmove {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 17px 0;
+    }
+}
+
+@-moz-keyframes progressmove {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 17px 0;
+    }
+}
+
+@keyframes progressmove {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 17px 0;
+    }
+}
+
+a.travis {
+    position: relative;
+    top: -4px;
+    right: 15px;
+}
+
+#picker2 img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+/*跳转页面*/
+.jump{
+    height:100px;
+    line-height:100px;
+    margin: auto;
+    position: relative;
+    display: table;
+    margin-top: 30px;
+}
+.jump img{
+    float: left;
+    width:100px;
+    height:100px;
+}
+.jump h1{
+    float: left;
+}
+.jump p{
+    font-weight: 700;
+}
+.jumps{
+    height:80px;
+    line-height:80px;
+    margin: auto;
+    position: relative;
+    display: table;
+    margin-top: 60px;
+}
+.jumps img{
+    float: left;
+    width:80px;
+    height:80px;
+}
+.jumps h1{
+    float: left;
+}
+.jumps p{
+    font-weight: 700;
+}
+.Aut_fail {
+    width: 100%;
+    text-align: center;
+    margin-top: 100px;
+}
+.Aut_fail button{
+    width: 100px;
+    height: 50px;
+    background: darkgray;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 0;
+}
+/*认证*/
+.approve{
+    margin: auto;
+    border: 3px dashed #e4e4e4;
+    line-height: 30px;
+    width: 910px;
+    padding: 20px 20px 40px 20px;
+    margin-top: 80px;
+}
+.approve h1{
+    font-size:44px;
+    color:#0188DE;
+    padding:20px 0px 10px 0px;
+}
+.approve h2{
+    color:#0188DE;
+    font-size:16px;
+    padding:10px 0px 40px 0px;
+}
+
+
+
+/* 5头部样式 */
+.radio-input {
+    width: 20px !important;
+    height: 20px !important;
+}
+
+.input-col {
+    width: 100%;
+}
+
+.input-col input {
+    position: relative;
+    top: 5px;
+}
+
+.input-col label {
+    line-height: 35px;
+    margin-left: 10px;
+}
+
+.input-col-box {
+    height: 36px;
+    overflow: hidden;
+}

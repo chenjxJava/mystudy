@@ -1,0 +1,115 @@
+*{
+	margin:0;
+	padding:0;
+}
+p{
+	font-family: "MicrosoftYaHei";
+	font-weight: 700;
+}
+span{
+	font-weight: 700;
+	font-family: "PingFangSC-Regular";
+}
+/*登陆首页头部*/
+.logo{
+	background-image: linear-gradient(-90deg, #4B76BF 0%, #488FCC 52%, #4B76BF 100%);
+	height: 314px;
+	width: 100%;
+	text-align: center;
+	position: relative;
+}
+.logo .shulian{
+	line-height: 314px;
+	font-weight: 700;
+	font-family: "PingFangSC-Regular";
+	font-size: 48px;
+	color: #FFFFFF;
+}
+.posi{
+	position: absolute;
+	top: 185px;
+	display: none;
+}
+/*手机账号欢迎登陆*/
+.Welcome-to-login{
+	position: relative;
+	display: block;
+	margin-top: 66px;
+}
+.login {
+	background: #FFFFFF;
+	box-shadow: 4px 4px 6px 0 rgba(153,153,153,0.50);
+	border-radius: 9px;
+	width: 390px;
+	height: 317px;
+	margin:0 auto;
+}
+.login-text{
+	text-align: center;
+	padding:10px 30px;
+}
+.login-text p{
+	font-family: "MicrosoftYaHei";
+	font-weight: 700;
+	font-size: 20px;
+	color: #508FF1;
+}
+/*form表单登陆*/
+.form-input{
+	font-weight: 700;
+	font-family: "MicrosoftYaHei";
+	font-size: 12px;
+	color: #858585;padding:10px;
+	margin-top: 20px;
+}
+ .form-input.uname{
+ 	background: url(../img/帐号icon.png) no-repeat 10px center;
+
+ 	padding-left: 40px;
+ }
+ .form-input.pword{
+ 	background: url(../img/密码icon点击.png) no-repeat 10px center;
+ 	padding-left: 40px;
+ }
+.login-text span{
+	float: left;
+	font-family: "MicrosoftYaHei";
+	font-size: 12px;
+	font-weight: 700;
+	color: #508FF1;
+	line-height: 13px;
+}
+.login-text .go-login{
+	float: right;
+	font-size: 12px;
+	color: #B7B7B7;
+}
+.sl-submit{
+	background: #508FF1;
+	border-radius: 3px;
+	width: 310px;
+	height: 45px;
+	border:0;
+	color:#fff;
+	font-family: "MicrosoftYaHei-Bold";
+	font-size: 14px;
+	font-weight: 700;
+	margin-top: 40px;
+}
+/*底部*/
+.login-top{
+	width: 100%;
+	height: 70px;
+	line-height: 70px;
+	text-align: center;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	overflow: hidden;
+}
+.login-top p{
+	font-family: "MicrosoftYaHei";
+	font-size: 12px;
+	font-weight: 700;
+	color: #6E6D6D;
+}

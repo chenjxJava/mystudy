@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="../css/login.css">
+	<title>登陆</title>
+</head>
+<body>
+	<div class="logo">
+		<div>
+			<h1 class="shulian">数 联 中 国 供 应 链 管 理 平 台</h1>
+		</div>
+	</div>
+	<div class="Welcome-to-login">
+		<div class="login">
+			<div class="login-text">
+				<p>欢迎登录</p>
+				<form id="signupForm" method="GET">
+					<div class="form-group form-teb">
+						<img src="../img/账号icon.png" alt="">
+						<input type="email" class="form-control form-input uname" name="email" id="email" placeholder="账号/手机">
+					</div>
+					<div class="form-group">
+						<input type="password" name="password" class="form-control form-input pword" placeholder="密码">
+					</div>
+				</form>
+				<a href="PasswordBack.html"><span>忘记密码？</span></a>
+				<a href="Register.html"><span class="go-login">还没有账号，前往注册>></span></a>
+				<span class="posi" style="color: red;">账号不正确</span>
+				<span class="posi" style="color: red;">密码不正确</span>
+				<span class="posi empty" style="color: red;">用户名或密码不能为空</span>
+				<button type="submit"  onclick="loginUser()" class="sl-submit">登录</button>
+			</div>
+		</div>
+	</div>
+	<div class="login-top">
+		<p>Copyright © 2016 数联中国 版权所有</p>
+	</div>
+</body>
+<script>
+	// $(document).ready(function() {
+	// 	$("#signupForm").validate({
+	// 		firstname:{
+	// 			firstname:"required";
+	// 			lastname:"required";
+	// 			email:{
+	// 				required:true;
+	// 				email:true;
+	// 			},	
+	// 			agree:"required"
+	// 		},
+	// 		messages:{
+	// 			email:"请输入正确格式",
+	// 		}
+
+	// 	})
+	// });
+	function loginUser(){
+		var uname=document.querySelector(".uname");
+		var empty=document.querySelector(".empty");
+		var flag_name=$.trim($(".uname").val());
+		var flag_password=$.trim($(".input_login_password").val());
+		var reg=/^1[34578][0-9]{9}/;
+		var reg1=/[a-zA-Z0-9]{1,10}@[a-zA-Z0-9]{1-5}\.[a-zA-Z0-9]{1,5}/;
+		if (!reg.test(flag_name)&&!reg1.test(flag_name)) {
+			alert("请正确填写手机号码和邮箱！");
+			$(".input_login_name").val("");
+		}
+		if(uname.value==""){
+			empty.style.display="block";
+		}
+	}
+</script>
+</html>

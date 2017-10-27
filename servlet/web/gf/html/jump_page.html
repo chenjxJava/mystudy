@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/Rigister.css">
+    <title>跳转页面</title>
+</head>
+<body>
+<div class="Rigister">
+    <div class="Register-Public-header">
+        <div class="RPheader-left">
+            <span>数 联 中 国 供 应 链 管 理 平 台</span>
+            <span class="Divide">|</span>
+            <a href=""><span>欢迎注册</span></a>
+        </div>
+        <div class="RPheader-right">
+            <span class="Rigister-login">
+            已有帐号请
+                <a href="Login.html"><span>登录</span></a>
+            </span>
+        </div>
+    </div>
+    <div class="jump">
+        <img src="../img/timg.jpg" alt="">
+        <h1>恭喜您，注册认证资料提交成功</h1>
+        <p>系统将在 <span id="time">3</span> 秒后跳转到企业认证页面</p>
+    </div>
+</div>
+</body>
+<script>
+    function delayURL() {
+        var delay = document.getElementById("time").innerHTML;
+        var t = setTimeout("delayURL()", 1000);
+        if (delay > 0) {
+            delay--;
+            document.getElementById("time").innerHTML = delay;
+        } else {
+            clearTimeout(t);
+            window.location.href = "Register2.html";
+        }
+    }
+    delayURL();
+</script>
+</html>
+
+

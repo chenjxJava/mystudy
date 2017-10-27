@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="../css/Rigister.css">
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="http://cdn.static.runoob.com/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+     <script src="../js/jquery.validate.js"></script>
+	<title></title>
+</head>
+<body>
+	<div class="Rigister">
+	<div class="Register-Public-header">
+        <div class="RPheader-left">
+            <span>数 联 中 国 供 应 链 管 理 平 台</span>
+            <span class="Divide">|</span>
+            <a href=""><span>欢迎注册</span></a>
+        </div>
+        <div class="RPheader-right">
+				<span class="Rigister-login">
+				已有帐号请
+					<a href="Login.html"><span>登录</span></a>
+				</span>
+        </div>
+    </div>
+    <div class="www">
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="60"
+                 aria-valuemin="0" aria-valuemax="100" style="width: 37.5%;">
+            </div>
+            <a href="javascript:void(0)" data="1" class="icon" style="background: #508FF1;" id="ic1">1</a>
+            <a href="javascript:void(0)" data="3" class="icon" style="background: #508FF1;" id="ic2">2</a>
+            <a href="javascript:void(0)" data="5" class="icon" id="ic3">3</a>
+            <a href="javascript:void(0)" data="7" class="icon" id="ic4">4</a>
+            <a href="javascript:void(0)" data="8" class="icon" id="ic5">5</a>
+            <span class="posi1 posi6">入驻须知</span>
+            <span class="posi2 posi6">填写企业信息</span>
+            <span class="posi3 posi6">资质上传</span>
+            <span class="posi4 posi6">经营品牌信息</span>
+            <span class="posi5 posi6">销售区域选择</span>
+        </div>
+    </div>
+		 <!-- 填写企业信息 -->
+    <div class="ibox-content aa">
+        <form action="" class="myform" id="companyForm">
+            <div class="form-horizontal m-t form-wh">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">公司名称</label>
+                    <div class="col-sm-9">
+                        <input type="text" name="myname" minlength="2" class="form-control" aria-required="true" required>
+                    </div>
+                    <div>
+                        <span class="col-sm-3 control-label" style="margin-left: 15px;"></span>
+                        <span>
+                            <span style="margin-left: 20px;">
+                                <input type="radio" name="ss" style="width: 18px; height: 18px;" id="inlineCheckbox1" value="option1"> 经营商
+                            </span>
+                            <span style="margin-left: 20px;">
+                                <input type="radio" name="ss" style="width: 18px; height: 18px;" id="inlineCheckbox2" value="option2"> 工厂
+                            </span>
+                            <span style="margin-left: 20px;">
+                                <input type="radio" name="ss" style="width: 18px; height: 18px;" id="inlineCheckbox3" value="option3"> 其他
+                            </span>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">公司电话</label>
+                    <div class="col-sm-9">
+                        <input type='text' name="teb" class="form-control" minlength="2" aria-required="true"
+                               onkeyup="this.value=this.value.replace(/[^0-9-]+/,'');" required/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">公司传真</label>
+                    <div class="col-sm-9">
+                        <input type='text' name="fax" class="form-control" onkeyup="this.value=this.value.replace(/[^0-9-]+/,'');" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">公司邮编</label>
+                    <div class="col-sm-9">
+                        <input name="Company_zip_code" class="form-control" type="text" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">公司邮箱</label>
+                    <div class="col-sm-9">
+                        <input id="email" name="email" class="form-control" type="email" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">公司地址</label>
+                    <div class="col-sm-9" data-toggle="distpicker" style="display: flex;">
+                        <!-- <label class="sr-only" for="provincel">province</label> -->
+                        <select name="" id="province1" class="form-control select_gsdz"></select>
+                        <select class="form-control select_gsdz" id="city1"></select>
+                        <select class="form-control select_gsdz" id="district1" style="border-right:1px solid #ccc"></select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">详细地址</label>
+                    <div class="col-sm-9">
+                        <input class="form-control" name="Detailed_address" type="text" name="detailed_address" required>
+                    </div>
+                </div>
+                <div class="form-group">                                                                                
+                    <label class="col-sm-3 control-label">法人电话</label>
+                    <div class="col-sm-9">
+                        <input type='text' name="Legal_person_phone" class="form-control" onkeyup="this.value=this.value.replace(/[^0-9-]+/,'');" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">法人邮箱</label>
+                    <div class="col-sm-9">
+                        <input name="Corporate_email" class="form-control" type="email" required Corporate_email>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">法人地址</label>
+                    <div class="col-sm-9">
+                        <input class="form-control" type="text" name="Legal_address" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">联系人</label>
+                    <div class="col-sm-9">
+                        <input id="username" name="contact" class="form-control" type="text" aria-required="true" aria-invalid="true" class="error" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">联系邮箱</label>
+                    <div class="col-sm-9">
+                        <input name="Contact_email" class="form-control" type="email" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">联系电话</label>
+                    <div class="col-sm-9">
+                        <input type='text' name="Contact_phone_number" class="form-control" onkeyup="this.value=this.value.replace(/[^0-9-]+/,'');"  required>
+                    </div>
+                </div>
+                
+                <!-- <button type="submit">下一步</button> -->
+            </div>
+            <div class="button">
+                <input type="button" class="next-step pre abc2" style=" background:  #9EC4FF;" value="上一步">
+                <!--<input type="submit" class="submit next-step next" style="margin-left: 30px;" value="下一步">-->
+                <input type="submit" class="submit next-step next " style="margin-left: 30px;" value="下一步">
+            </div>
+        </form>
+    </div>
+	</div>
+</body>
+<script src='../js/register-password.js'></script>
+<script>
+    $().ready(function() {
+        $('.abc2').click(function() {
+            window.location.href="Register2.html";
+        });
+           $('#companyForm').validate({
+      
+        focusInvalid: false,
+        onkeyup: false,
+        submitHandler: function (form) {
+            isSubmit = true;
+             window.location.href="Register4.html";
+             // 成功执行函数
+        },
+        errorPlacement: function(error, element) {
+            error.insertAfter(element);
+        }
+
+    });
+
+    });
+</script>
+</html>
